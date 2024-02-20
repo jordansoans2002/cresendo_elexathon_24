@@ -5,6 +5,7 @@ org 0000H
 	rst:
 	mov P2,#00H
 	setb P2.7
+	setb P3.2
 	
 	strt:
 	jnb P3.2, rst
@@ -42,11 +43,12 @@ org 0000H
 	clr P2.6
 	setb P2.4
 	
-
+	setb P3.0 ;not req for proteus, push button resets
 	sjmp strt
 	
 	
 	delay: 
+		; fine tune delay 237 cycles may be extra
 		mov TL0,#27H
 		mov TH0,#4BH
 		setb TR0
