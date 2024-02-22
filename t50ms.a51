@@ -1,11 +1,8 @@
 org 0000H
-	;setb P3.0
-	;setb P3.2
 	mov TMOD,#01H 
 	rst:
-	mov P2,#00H
-	mov P3,#00H
-	setb P2.7
+	mov P1,#0FFH
+	mov P2,#0C0H
 	setb P3.2
 	setb P3.0
 	
